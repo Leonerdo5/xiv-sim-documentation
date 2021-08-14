@@ -131,7 +131,20 @@ mechanicData.referenceMechanicProperties = new Dictionary<string, MechanicProper
 						spawnOnTarget = true
 					},
 					new WaitEvent { timeToWait = 2f },
-					new SpawnTargetedEvents { referenceMechanicName = "Twister", spawnOnTarget = true, targetingScheme = new TargetRandomPlayers { totalTargetsNeeded = 4 } },
+					new SpawnTargetedEvents { referenceMechanicName = "Twister", spawnOnTarget = true, targetingScheme = new TargetRandomPlayers { totalTargetsNeeded = 4 } },,
+					new WaitEvent { timeToWait = 10 },
+					new SpawnEnemy {
+						enemyName = "Bahamut",
+						textureFilePath = "Mechanics/Resources/Bahamut.png",
+						colorHtml = "#0a4d8b",
+						maxHp = 10000000,
+						baseMoveSpeed = 0,
+						hitboxSize = 3,
+						visualPosition = new Vector3(0, 1.2f, 0),
+						visualScale = new Vector3(1, 1.5f, 1) * 1.5f,
+						referenceMechanicName = "BahamutStart",
+						rotation = 180
+					}
 				}
 			}
 		}
